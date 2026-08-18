@@ -44,9 +44,18 @@ extern "C" {
 //
 //****************************************************************************
 
+/* JFSW Belle port: the E7 has no game-friendly Space key (and no usable
+   physical kpad), so the primary "action" scan code is Enter. Other
+   platforms keep the original Space-first order. */
+#ifdef __SYMBIAN32__
+#define BUTTON0_SCAN_1   sc_Enter
+#define BUTTON0_SCAN_2   sc_kpad_Enter
+#define BUTTON0_SCAN_3   sc_Space
+#else
 #define BUTTON0_SCAN_1   sc_Space
 #define BUTTON0_SCAN_2   sc_Enter
 #define BUTTON0_SCAN_3   sc_kpad_Enter
+#endif
 #define BUTTON1_SCAN     sc_Escape
 
 #define AXISUNDEFINED   0x7f
