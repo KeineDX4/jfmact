@@ -44,7 +44,7 @@ extern "C" {
 //
 //****************************************************************************
 
-/* JFSW Belle port: the E7 has no game-friendly Space key (and no usable
+/* Symbian Belle port: the E7 has no game-friendly Space key (and no usable
    physical kpad), so the primary "action" scan code is Enter. Other
    platforms keep the original Space-first order. */
 #ifdef __SYMBIAN32__
